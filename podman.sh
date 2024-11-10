@@ -1,17 +1,11 @@
 # Podman 설치
 sudo apt install -y podman
+sudo apt install -y podman-compose             
 sudo groupadd podman 
 sudo usermod -aG podman $USER
 sudo newgrp podman 
+
 id -u
-
-# Podman Compose 설치 (Python으로 설치)
-sudo apt install python3-pip -y  # Python 3의 패키지 관리 도구인 pip를 설치합니다.
-pip3 install podman-compose     # Podman Compose를 pip로 설치합니다.
-
-# Podman Compose 수동 설치 (스크립트 사용)
-curl -o /usr/local/bin/podman-compose https://raw.githubusercontent.com/containers/podman-compose/devel/podman_compose.py  # Podman Compose 스크립트를 다운로드합니다.
-chmod +x /usr/local/bin/podman-compose  # 다운로드한 스크립트에 실행 권한을 부여합니다.
 
 # Podman Compose 설정 파일
 # /etc/containers/registries.conf 파일에서 레지스트리 설정을 변경합니다.
