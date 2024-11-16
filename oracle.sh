@@ -1,5 +1,5 @@
-mkdir -p /home/silkwave/oradata/
-chmod 777 /home/silkwave/oradata
+mkdir -p ${HOME}/oradata/
+chmod 777 ${HOME}/oradata
 
 podman search docker.io/neo365/oracle19c-ko 
 podman pull docker.io/neo365/oracle19c-ko 
@@ -8,8 +8,9 @@ podman run -d --name oracle19c-ko          \
            -e ORACLE_SID=ORCL              \
            -e ORACLE_PWD=oraclepassword    \
            -e ORACLE_CHARACTERSET=UTF8     \
-           -v /home/silkwave/oradata/:/opt/oracle/oradata \
+           -v ${HOME}/oradata/:/opt/oracle/oradata \
            neo365/oracle19c-ko 
+           
 
 podman logs -f oracle19c-ko
 

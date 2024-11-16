@@ -25,10 +25,10 @@ alias docker="podman"  # Docker 명령어 대신 Podman을 사용하도록 alias
 alias docker-compose="podman-compose"  # Docker Compose 명령어 대신 Podman Compose를 사용하도록 alias를 설정합니다.
 
 ##############################################
-sudo docker stop `docker ps -a -q`
-sudo docker rm   `docker ps -a -q`
-sudo docker rmi  `docker images -q`
-sudo docker commit ts silkwave/tensorflow-notebook
+docker stop `docker ps -a -q`
+docker rm   `docker ps -a -q`
+docker rmi  `docker images -q`
+docker commit ts silkwave/tensorflow-notebook
 
 ##############################################
 
