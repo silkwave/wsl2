@@ -5,16 +5,17 @@ podman search docker.io/neo365/oracle19c-ko
 podman pull docker.io/neo365/oracle19c-ko 
 podman run -d                              \
            --name oracle19c-ko             \
-           --network podman                \
+           --network bridge                \
            -p 1521:1521                    \
            -e ORACLE_SID=ORCL              \
            -e ORACLE_PWD=oraclepassword    \
            -e ORACLE_CHARACTERSET=UTF8     \
            -v ${HOME}/oradata/:/opt/oracle/oradata \
-           neo365/oracle19c-ko 
-           
+               neo365/oracle19c-ko 
+
 
 sudo socat TCP-LISTEN:1521,fork TCP:10.88.0.x:1521
+sudo socat TCP-LISTEN:1521,fork TCP:localhost:1521
 sudo iptables -t nat -A PREROUTING -p tcp --dport 1521 -j DNAT --to-destination 127.0.0.1:1521
 
 podman network inspect podman
