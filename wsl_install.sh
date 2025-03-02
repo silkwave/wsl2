@@ -23,7 +23,6 @@ explorer.exe .
 sudo sed -i -re 's/([a-z]{2}.)?archive.ubuntu.com|security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 sudo sed -i -E 's#http://[a-zA-Z0-9.-]+/ubuntu/#http://mirror.kakao.com/ubuntu/#g' /etc/apt/sources.list.d/ubuntu.sources
 
-
 sudo apt update
 sudo apt upgrade -y
 
