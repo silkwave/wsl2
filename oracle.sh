@@ -50,6 +50,7 @@ show pdbs
 
 create user docker identified by "docker123";
 grant connect, resource to docker;
+GRANT DBA TO docker;
 alter user docker quota unlimited on users;
 
 CREATE USER silkwave IDENTIFIED BY oraclepassword;
