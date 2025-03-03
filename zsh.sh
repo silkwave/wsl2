@@ -17,6 +17,8 @@ ZSH_THEME="jonathan"
 ZSH_THEME="junkfood"
 ZSH_THEME="strug"
 ZSH_THEME="xiong-chiamiov"
+
+
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 
