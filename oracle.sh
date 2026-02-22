@@ -21,6 +21,7 @@ podman run -d \
   -v ${HOME}/oradata:/opt/oracle/oradata \
   neo365/oracle19c-ko
 
+
 # 'oracle19c-ko' 컨테이너 시작/중지
 podman start oracle19c-ko
 podman stop oracle19c-ko
@@ -39,6 +40,7 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22/tcp
 sudo ufw allow 1521/tcp
+sudo ufw allow 5500/tcp
 sudo ufw enable
 
 # --- 네트워크 및 컨테이너 정보 확인 ---
