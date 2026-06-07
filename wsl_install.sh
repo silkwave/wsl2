@@ -62,10 +62,10 @@ sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt a
 
 # --- 필수 패키지 및 GUI 애플리케이션 설치 ---
 # 빌드 도구, 개발 유틸리티, GUI 앱 등 필수 패키지 설치
-sudo apt install -y build-essential vim git wget curl \
-                    font-manager gedit nautilus x11-apps firefox \
-                    language-selector-gnome update-manager-core \
-                    bridge-utils net-tools
+sudo apt install -y build-essential vim git wget curl 
+sudo apt install -y font-manager gedit nautilus x11-apps firefox 
+sudo apt install -y language-selector-gnome update-manager-core 
+sudo apt install -y bridge-utils net-tools
 
 
 # --- wsl.conf 및 resolv.conf 설정 ---
