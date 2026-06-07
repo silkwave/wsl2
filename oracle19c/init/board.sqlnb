@@ -1,0 +1,31 @@
+cells:
+  - kind: 2
+    value: |-
+      SELECT ID,
+          TITLE,
+          CONTENT,
+          CREATED_AT FROM BOARD;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      INSERT /*+ APPEND */ INTO BOARD (TITLE, CONTENT)
+      SELECT
+          '병렬테스트 ' || LEVEL,
+          RPAD('대용량', 2000, '*')
+      FROM dual
+      CONNECT BY LEVEL <= 1000;
+
+      COMMIT;
+    languageId: oracle-sql
+  - kind: 2
+    value: |-
+      CREATE TABLE BOARD (
+          ID          NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+          TITLE       VARCHAR2(200) NOT NULL,
+          CONTENT     CLOB NOT NULL,
+          CREATED_AT  DATE DEFAULT SYSDATE NOT NULL
+      );
+    languageId: oracle-sql
+  - kind: 2
+    value: drop TABLE BOARD;
+    languageId: oracle-sql
