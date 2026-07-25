@@ -8,7 +8,8 @@ sudo apt update
 # - tasksel: 특정 작업을 위한 패키지 그룹 설치 도구
 # - screenfetch, neofetch: 터미널에 시스템 정보와 배포판 로고 표시
 # - language-pack-ko, language-pack-gnome-ko: 한국어 언어 팩
-sudo apt install -y fonts-noto-cjk tasksel screenfetch neofetch language-pack-ko language-pack-gnome-ko
+sudo apt install -y fonts-noto-cjk  language-pack-ko language-pack-gnome-ko
+sudo apt install -y  tasksel screenfetch 
 
 # Ubuntu에 Locale 변경하기
 # 현재 시스템의 로케일 설정 확인

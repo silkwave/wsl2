@@ -7,6 +7,8 @@ sudo groupadd podman
 sudo usermod -aG podman "$USER"
 newgrp podman # 새 그룹 적용 (재로그인 필요할 수 있음)
 
+sudo mount --make-rshared /
+
 # 현재 사용자의 UID(User ID) 확인
 id -u
 

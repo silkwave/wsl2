@@ -3,6 +3,10 @@
 mkdir -p /u01/app/oracle/oradata ${HOME}/oradata/
 chmod 777 /u01/app/oracle/oradata ${HOME}/oradata/
 
+mkdir -p  ${HOME}/oradata/
+chmod 777  ${HOME}/oradata/
+
+
 # --- Podman을 이용한 오라클 컨테이너 관리 ---
 # Podman을 사용하여 'neo365/oracle19c-ko' 이미지 검색 및 다운로드
 podman search docker.io/neo365/oracle19c-ko
